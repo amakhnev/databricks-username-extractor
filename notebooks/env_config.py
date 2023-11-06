@@ -3,6 +3,10 @@
 
 # Current environment
 current_env = 'dev'  
+try:
+    current_env = dbutils.widgets.get("env")
+except Exception as e:
+    pass
 
 # Base file path for the tables
 base_file_path = {
@@ -31,4 +35,4 @@ username_rank_filter_threshold = {
     'prod': 20
 }
 
-
+print('Config loaded. Current environment = ' + current_env)

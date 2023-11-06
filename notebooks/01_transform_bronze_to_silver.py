@@ -7,6 +7,10 @@
 
 # COMMAND ----------
 
+dbutils.widgets.dropdown("env", "dev", ["dev", "prod"])
+
+# COMMAND ----------
+
 # MAGIC %run ./env_config
 
 # COMMAND ----------
